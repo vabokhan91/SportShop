@@ -67,7 +67,7 @@ public class Shop {
                 System.out.println("Can not rent equipment. Customer " + customer.getId() + " " + customer.getName() + " has already borrowed > 3 units.");
             }
         } else {
-            System.out.println("There is no equipment available");
+            System.out.println("There is no equipment available or no such equipment");
         }
     }
 
@@ -75,7 +75,7 @@ public class Shop {
      * Checks if requested equipment is available.
      */
     private boolean isEquipmentAvailable(SportEquipment equipment) {
-        if (goods.get(equipment) > 0) {
+        if (equipment !=null && goods.get(equipment) > 0) {
             return true;
         } else return false;
     }
@@ -100,7 +100,7 @@ public class Shop {
 
         while (iterator.hasNext()) {
             SportEquipment current = iterator.next();
-            if (current.getTitle().contains(name)) {
+            if (current.getTitle().equalsIgnoreCase(name)) {
                 good = new SportEquipment(current.getCategory(), current.getTitle(), current.getPrice());
                 break;
             }

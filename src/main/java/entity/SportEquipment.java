@@ -47,7 +47,7 @@ public class SportEquipment{
     @Override
     public int hashCode() {
         int i = 31;
-        return i*category.hashCode() + i*((title ==null)? 0 : title.hashCode()) + i*price;
+        return i*category.hashCode() + ((title ==null)? 0 : title.hashCode()) + price;
     }
 
     @Override
