@@ -101,7 +101,7 @@ public class Shop {
         while (iterator.hasNext()) {
             SportEquipment current = iterator.next();
             if (current.getTitle().contains(name)) {
-                good = current;
+                good = new SportEquipment(current.getCategory(), current.getTitle(), current.getPrice());
                 break;
             }
         }

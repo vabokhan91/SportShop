@@ -14,15 +14,17 @@ public class Runner {
 
         Customer customer = new Customer(1, "James");
         Customer customer1 = new Customer(2, " John");
-        SportEquipment bicycle = shop.findByTitle("Road");
+        SportEquipment bicycle1 = shop.findByTitle("Road");
+        SportEquipment bicycle2 = shop.findByTitle("Road");
+        SportEquipment bicycle3 = shop.findByTitle("Road");
         SportEquipment bmx = shop.findByTitle("BMX");
         SportEquipment footballBalls = shop.findByTitle("Football");
         SportEquipment darts = shop.findByTitle("Darts");
 
-        shop.rent(customer, bicycle);
-        shop.rent(customer, bicycle);
+        shop.rent(customer, bicycle1);
+        shop.rent(customer, bicycle2);
         shop.rent(customer, bmx);
-        shop.rent(customer, bicycle);
+        shop.rent(customer, bicycle3);
         shop.rent(customer1, footballBalls);
         shop.rent(customer1, darts);
         shop.rent(customer1, footballBalls);
